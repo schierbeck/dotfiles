@@ -1,0 +1,12 @@
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias subl="open -a /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias ls="ls -AFhlG"
+alias www="cd /Applications/MAMP/htdocs/"
+alias starwars="telnet towel.blinkenlights.nl"
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias ip="curl ifconfig.me"
+alias mm="ssh johan@80.217.172.60"
+alias remdel="git rm `git ls-files --deleted`"
+alias bones="git clone git://github.com/eddiemachado/bones.git"
+alias sassy="sass --watch style.scss:../css/style.css"
+alias phpunit='vendor/bin/phpunit'

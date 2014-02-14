@@ -1,0 +1,26 @@
+# Create django project & run server
+dj(){
+	cd ~/python
+	virtualenv "$1"_env
+	cd "$1"_env
+	source bin/activate
+	pip install django
+	pip install south
+	django-admin.py startproject "$1"
+	cd "$1"/"$1"
+	open -a 'Coda 2' settings.py
+	cd ..
+	mkdir templates
+	touch templates/base.html
+	mkdir static
+	cd static
+	mkdir css
+	touch css/style.css
+	mkdir js
+	cd js
+	curl -O http://code.jquery.com/jquery-latest.js
+	touch script.js
+	cd ..
+	cd ..
+	python manage.py runserver
+}
